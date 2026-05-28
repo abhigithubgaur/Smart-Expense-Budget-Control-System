@@ -27,6 +27,11 @@ public class AuthController {
             return ResponseEntity.badRequest().body("Email already exists!");
         }
 
+        // 👇 ADD THIS BACKUP PROTECTION TO ENSURE NULL IS NEVER PASSED
+    if (user.getMonthlyBudget() == null) {
+        user.setMonthlyBudget(0.0);
+    }
+
         user.setPassword(passwordEncoder.encode(user.getPassword()));
 
         userRepository.save(user);
