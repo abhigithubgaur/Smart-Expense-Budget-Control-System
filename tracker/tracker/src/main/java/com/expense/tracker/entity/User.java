@@ -24,6 +24,6 @@ public class User {
     @Column(nullable = false)
     private String password;
 
-    @Column(nullable = true)
+    @Column(nullable = false)
     private Double monthlyBudget = 0.0;
 }
