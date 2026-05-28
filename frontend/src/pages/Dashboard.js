@@ -28,7 +28,7 @@ function Dashboard({ darkMode, setDarkMode }) {
     date: ""
   });
 
-  const [loading, setLoading] = useState(false);
+  //const [loading, setLoading] = useState(false);
   const [activeTab, setActiveTab] = useState("expenses");
 
 
